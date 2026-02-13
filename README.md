@@ -1,5 +1,5 @@
 💝 Valentine Teddy - A Romantic Interactive Card
-https://img.icons8.com/color/96/000000/teddy-bear.png
+
 
 A beautiful, interactive Valentine's Day card featuring a cute teddy bear, romantic Hindi songs, famous poetry, and personalized messages. Perfect for surprising your loved one!
 
