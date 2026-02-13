@@ -51,6 +51,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 400px;
 }
 
 .teddy-giant {
@@ -376,10 +377,96 @@ body {
   margin-top: 1rem;
 }
 
+/* ===== PAGE FOOTER STYLES ===== */
+.page-footer {
+  width: 100%;
+  text-align: center;
+  margin-top: 1.8rem;
+  padding-top: 1rem;
+  border-top: 2px dashed #ffb6c1;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.95rem;
+  color: #a63c4b;
+}
+
+.page-footer p {
+  margin: 0.3rem 0;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.page-footer strong {
+  color: #d43b5e;
+  font-size: 1.1rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #666;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0.3rem 0.8rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50px;
+  border: 1px solid #ffb6c1;
+}
+
+.footer-links a i {
+  font-size: 1.1rem;
+}
+
+.footer-links a:hover {
+  color: #fff;
+  background: #ff6f8a;
+  transform: translateY(-2px);
+}
+
+/* Big teddy screen footer special styling */
+.big-teddy-screen .page-footer {
+  border-top: 2px dashed rgba(255, 255, 255, 0.5);
+  color: #fff;
+  margin-top: 2.5rem;
+}
+
+.big-teddy-screen .page-footer p {
+  color: #93253a;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  display: inline-block;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 0 #ffb6c1;
+}
+
+.big-teddy-screen .footer-links a {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid white;
+  color: #93253a;
+  font-weight: 600;
+}
+
+.big-teddy-screen .footer-links a:hover {
+  background: #ff3b5c;
+  color: white;
+}
+
 @media (max-width: 480px) {
   .teddy-card-outer { padding: 1.2rem; }
   .teddy-giant { font-size: 12rem; }
   .section-title { font-size: 2rem; }
   .choice-option { font-size: 0.9rem; }
   .big-thankyou { font-size: 3.5rem; }
+  .footer-links { gap: 0.8rem; }
+  .footer-links a { font-size: 0.8rem; padding: 0.2rem 0.5rem; }
 }
