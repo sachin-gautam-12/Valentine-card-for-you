@@ -1,70 +1,53 @@
-💝 Valentine Teddy - A Romantic Interactive Card
 
+### ✨ **Visual Effects**
+- Emoji sparks on every click
+- Floating animations
+- Gradient backgrounds
+- Glass morphism effect
+- Responsive design for mobile
 
-A beautiful, interactive Valentine's Day card featuring a cute teddy bear, romantic Hindi songs, famous poetry, and personalized messages. Perfect for surprising your loved one!
+---
 
-✨ Features
-🧸 Interactive Teddy Bear
-Click on the giant teddy bear to start the experience
+## 🚀 **How to Use**
 
-Teddy dances and creates emoji sparks on interaction
+### **Installation**
+1. Download all three files:
+   - `index.html`
+   - `style.css`
+   - `script.js`
 
-🎵 Romantic Hindi Songs
-4 working romantic songs with play/pause/stop controls:
+2. Place them in the same folder
 
-"Tum Hi Ho" - Aashiqui 2
+3. Open `index.html` in any modern browser
 
-"I Love You" - Bodyguard
+### **Usage**
+1. Click on the giant teddy bear to start
+2. Enter your name
+3. Choose what you like (Flowers/Chocolates/Cakes/Poetry)
+4. Play the romantic song using the mini player
+5. Click "Open Your Card" to see personalized Shayari
+6. Go to "Thank You Letter" for the grand finale
+7. Use "Start Again" to reset
 
-"Khat" - Navjot
+---
 
-"Tumse Hi" - Jab We Met
+## 📱 **Browser Compatibility**
+- ✅ Chrome (Desktop & Mobile)
+- ✅ Firefox
+- ✅ Safari (iOS & Mac)
+- ✅ Edge
+- ✅ Opera
 
-📜 Famous Poets & Shayari
-Beautiful couplets from legendary poets:
+---
 
-Jaun Eliya - Intense romantic poetry
+## 🎨 **Customization**
 
-Mirza Ghalib - Classical Urdu master
-
-Gulzar - Modern romantic lyrics
-
-Faiz Ahmad Faiz - Revolutionary romantic
-
-Rahat Indori - Contemporary poetry
-
-Ahmad Faraz - Romantic Urdu poet
-
-Basheer Badr - Modern Shayari
-
-Wasim Barelvi - Love poetry
-
-Javed Akhtar - Legendary lyricist
-
-🎁 4 Choice Options
-Users can select what they like:
-
-🌸 Flowers - Romantic floral theme
-
-🍫 Chocolates - Sweet love theme
-
-🎂 Cakes - Celebration theme
-
-📜 Romantic Poetry - Classic Shayari theme
-
-Each choice features:
-
-Custom Shayari lines
-
-Themed decorations and icons
-
-Personalized messages
-
-💌 Personalized Experience
-Enter your name for personalized messages
-
-"For You, [Name] ❤️" appears throughout
-
-Final thank you letter with your name
-
-💖 Large Thank You Letter
+### **Add More Songs**
+In `script.js`, update the `songDatabase`:
+```javascript
+const songDatabase = {
+  yourChoice: {
+    name: "🎵 Song Name",
+    url: "https://your-audio-url.mp3"
+  }
+};
