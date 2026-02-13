@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>Valentine Teddy · Made For You</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts + Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Quicksand:wght@300;400;500;600;700&family=Poiret+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Canvas for emoji sparks -->
+  <canvas id="emoji-canvas"></canvas>
+
+  <!-- MAIN CARD CONTAINER -->
+  <div class="teddy-card-outer">
+    <!-- BIG TEDDY ENTRY -->
+    <div id="bigTeddyScreen" class="big-teddy-screen">
+      <div class="teddy-giant" id="giantTeddy">🧸</div>
+      <div class="enter-prompt">💕 Made For You</div>
+    </div>
+
+    <!-- FULL CONTENT (hidden initially) -->
+    <div id="fullCardContent" class="couple-card-content">
+
+      <!-- PAGE 1: User Input & Choices -->
+      <div id="page1" class="page active-page">
+        <div class="small-teddy-icon">🧸❤️🧸</div>
+        <div class="section-title">Made For You</div>
+
+        <!-- Hidden Audio Player -->
+        <audio id="audioPlayer" preload="auto"></audio>
+
+        <div class="valentine-form">
+          <div class="input-group">
+            <i class="fas fa-heart"></i>
+            <input type="text" id="userName" placeholder="Apna naam likhen ...">
+          </div>
+
+          <div style="font-size: 1.4rem; margin: 0.5rem 0; color:#952439;">Aapko kya pasand hai? 💝</div>
+
+          <div class="choices-grid">
+            <div class="choice-option selected" id="choiceFlowers" data-choice="flowers">
+              <i class="fas fa-leaf"></i> 🌸 Flowers
+            </div>
+            <div class="choice-option" id="choiceChocolate" data-choice="chocolate">
+              <i class="fas fa-candy-cane"></i> 🍫 Chocolates
+            </div>
+            <div class="choice-option" id="choiceCake" data-choice="cake">
+              <i class="fas fa-cake-cup"></i> 🎂 Cakes
+            </div>
+            <div class="choice-option" id="choicePoetry" data-choice="poetry">
+              <i class="fas fa-feather"></i> 📜 Romantic Poetry
+            </div>
+          </div>
+
+          <!-- Mini Music Player Controls -->
+          <div class="mini-player">
+            <div class="song-info" id="currentSong">❤️ Select your choice to play song</div>
+            <div class="player-controls-small">
+              <button class="control-btn-small" id="playPauseBtn"><i class="fas fa-play" id="playPauseIcon"></i></button>
+              <button class="control-btn-small" id="stopBtn"><i class="fas fa-stop"></i></button>
+            </div>
+          </div>
+
+          <button class="btn" id="createCardBtn">
+            <i class="fas fa-envelope-open-heart"></i> Open Your Card
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+        <p style="margin: 1rem 0 0; color: #a63c4b;">✨ Made With Love For You ✨</p>
+      </div>
+
+      <!-- PAGE 2: Valentine Card with User Choice -->
+      <div id="page2" class="page">
+        <div class="love-card">
+          <div class="floral-decor" id="choiceDecor">
+            <span>🌸</span> <span>🌹</span> <span>🌺</span> <span>🍫</span> <span>🍬</span>
+          </div>
+          <div class="partner-names" id="personalizedMessage">Made For You</div>
+          <div class="sayari-box" id="sayariMessage">
+            <!-- filled by js -->
+          </div>
+          <div class="gift-icons" id="choiceIcons">
+            <span>🧸</span> <span>💝</span> <span>🍫</span> <span>🌹</span>
+          </div>
+          <div style="font-size: 1.4rem; color:#ad3349; margin: 1rem 0;">✨ With Love ✨</div>
+
+          <!-- Mini Player on Page 2 -->
+          <div class="mini-player">
+            <div class="song-info" id="currentSong2">❤️ Playing...</div>
+            <div class="player-controls-small">
+              <button class="control-btn-small" id="playPauseBtn2"><i class="fas fa-play" id="playPauseIcon2"></i></button>
+              <button class="control-btn-small" id="stopBtn2"><i class="fas fa-stop"></i></button>
+            </div>
+          </div>
+
+          <button class="btn" id="gotoFinalBtn">
+            <i class="fas fa-star"></i> Thank You Letter
+          </button>
+          <button class="btn btn-secondary" id="backFromPage2Btn">
+            <i class="fas fa-arrow-left"></i> Back
+          </button>
+        </div>
+      </div>
+
+      <!-- PAGE 3: Final Thank You Letter (LARGE) -->
+      <div id="page3" class="page">
+        <div class="final-page thank-you-page">
+          <div style="font-size: 4rem;">🧸💖🧸</div>
+
+          <!-- LARGE THANK YOU LETTER -->
+          <div class="thankyou-container">
+            <div class="big-thankyou">THANK</div>
+            <div class="big-thankyou">YOU</div>
+            <div class="heart-decoration">❤️ ❤️ ❤️</div>
+            <div class="thankyou-message" id="thankyouMessage">
+              For being you, for your love, for everything.
+            </div>
+            <div class="personal-signature" id="signatureName">
+              With Love, Teddy 🧸
+            </div>
+          </div>
+
+          <div class="floral-decor" style="margin: 1.8rem 0;">
+            <span>🍫</span> <span>🌹</span> <span>🍰</span> <span>💕</span>
+          </div>
+
+          <!-- Mini Player on Page 3 -->
+          <div class="mini-player">
+            <div class="song-info" id="currentSong3">❤️ Playing...</div>
+            <div class="player-controls-small">
+              <button class="control-btn-small" id="playPauseBtn3"><i class="fas fa-play" id="playPauseIcon3"></i></button>
+              <button class="control-btn-small" id="stopBtn3"><i class="fas fa-stop"></i></button>
+            </div>
+          </div>
+
+          <button class="btn" id="resetBtn">
+            <i class="fas fa-heart"></i> Start Again
+          </button>
+          <button class="btn btn-secondary" id="backFromPage3Btn">
+            <i class="fas fa-arrow-left"></i> Back
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
