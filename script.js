@@ -1,4 +1,7 @@
 // ===== script.js (with User Choices + Large Thank You) =====
+// Made with 💖 by Sachin Kumar Singh
+// Instagram: @sachin_cse_ | LinkedIn: Sachin Kumar Singh
+
 (function() {
   // ----- EMOJI SPARK ENGINE -----
   const canvas = document.getElementById('emoji-canvas');
@@ -166,7 +169,7 @@
 
   // Decorations based on choice
   const decorMap = {
-    flowers: { decor: "🌸 🌹 🌺 🌸 🌹", icons: "🌸 💝 🌹 💐" },
+    flowers: { decor: "🌸 🌹 🌺 🌸 🌹", icons: "🌸 🌸 🌹 💐" },
     chocolate: { decor: "🍫 🍬 🍭 🍫 🍬", icons: "🍫 💝 🍬 🍭" },
     cake: { decor: "🎂 🎈 🎉 🎂 🎈", icons: "🎂 💝 🎈 🎉" },
     poetry: { decor: "📜 ✍️ 💭 📜 ✨", icons: "📜 💝 ✍️ 💭" }
@@ -346,6 +349,12 @@
   document.querySelector('.small-teddy-icon')?.addEventListener('click', (e) => {
     createExplosion(e.pageX, e.pageY, 12);
   });
+
+  // Developer Credit in Console
+  console.log("%c❤️ Made with Love by Sachin Kumar Singh ❤️", "color: #ff3b5c; font-size: 16px; font-weight: bold; font-family: 'Dancing Script', cursive;");
+  console.log("%c📷 Instagram: @sachin_cse_", "color: #E1306C; font-size: 14px; font-weight: bold;");
+  console.log("%c💼 LinkedIn: Sachin Kumar Singh", "color: #0077B5; font-size: 14px; font-weight: bold;");
+  console.log("%c📧 Email: sachincse326@gmail.com", "color: #D14836; font-size: 14px; font-weight; bold;");
 
   // INIT: show big teddy
   bigTeddyScreen.style.display = 'flex';
